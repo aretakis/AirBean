@@ -1,25 +1,21 @@
-import logo from './logo.svg';
-import './App.css';
+import airbean from "./assets/graphics/airbean-landing.svg";
+import "./App.css";
+import { Link } from "react-router-dom";
+import flowers_left from "./assets/graphics/intro-graphic-left.svg";
+import flowers_right from "./assets/graphics/intro-graphic-right.svg";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	return (
+		<div className="App">
+			<img src={flowers_left} />
+			<header className="App-header">
+				<Link to="/menu">
+					<img src={airbean} className="App-logo-airbean" alt="" />
+				</Link>
+			</header>
+			<img src={flowers_right} />
+		</div>
+	);
 }
 
 export default App;
